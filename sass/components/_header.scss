@@ -4,10 +4,15 @@
 	&--title{
 		font-size: 5rem;
 		padding: 0 0 1rem 0;
+		letter-spacing: 1px;
 	}
 
 	&--date{
 		font-size: 2rem;
 		font-weight: 100;
 	}
+}
+
+.nav{
+	padding: 2rem 0;
 }
