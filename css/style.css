@@ -21,7 +21,8 @@ body {
 .header {
   text-align: center;
   font-size: 1.6rem;
-  border-bottom: 1px solid #000; }
+  border-bottom: 1px solid #000;
+  margin: 0 0 2rem 0; }
   .header--title {
     font-size: 5rem;
     padding: 0 0 1rem 0;
@@ -51,3 +52,12 @@ body {
     .nav--item__link {
       color: #000;
       text-decoration: none; }
+
+.advertisment {
+  position: relative;
+  max-width: 1000px;
+  display: block;
+  margin: 0 auto; }
+  .advertisment--img {
+    width: 100%;
+    height: auto; }
