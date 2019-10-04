@@ -11,7 +11,7 @@
 	<title>The Daily Papyrus</title>
 </head>
 <body>
-	<input type="checkbox" id="switch">
+	<input type="checkbox" id="switch" onclick="bodyToggle()">
 	<label for="switch">
 		<div class="toggle"></div>
 		<div class="names">
@@ -53,19 +53,31 @@
 		</main>
 	</div>
 
-</body>
 <script>
-	var m = new Date();
-	var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-	var monthPrinted = months[m.getMonth()];;
+	const m = new Date();
+	const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+	const monthPrinted = months[m.getMonth()];;
 	
-	var d = new Date();
-	var day = d.getDate();
+	const d = new Date();
+	const day = d.getDate();
 
-	var y = new Date();
-	var year = y.getFullYear();
+	const y = new Date();
+	const year = y.getFullYear();
 	
-	document.getElementById("date").innerHTML = monthPrinted + ' ' + day + ', ' + year;
+	document.getElementById('date').innerHTML = monthPrinted + ' ' + day + ', ' + year;
 
-	</script>
+	function bodyToggle() {
+
+		const checkBox = document.getElementById('switch');
+		const body = document.getElementsByTagName('body')[0];
+
+		if (checkBox.checked == true){
+			body.style.background = "#26242E";
+		} else {
+			body.style.background = "#fff";
+		}
+	}
+</script>
+</body>
+
 </html>

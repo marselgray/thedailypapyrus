@@ -9,7 +9,7 @@ label, .toggle {
 	border-radius: 100px;
 }
 label {
-	width: 20%;
+	width: 15%;
 	background-color: rgba(0,0,0,.1);
 	border-radius: 100px;
 	position: relative;
@@ -55,12 +55,12 @@ label {
 
 			.light{
 				opacity: 0.5;
-				color: $white;
+				color: $black;
 			}
 		
 			.dark{
 				opacity: 1;
-				color: $black;
+				color: $white;
 			}
 		}
 	}
