@@ -7,6 +7,14 @@
 	box-sizing: inherit;
 }
 
+// Colors
+
+$white: #fff;
+$black: #000;
+$grey: #D3D3D3;
+
+$dark: #26242E;
+
 html{
 	/* this is the root font size so now 1 rem equals 10px
 	font-size: 10px;
@@ -18,12 +26,6 @@ html{
 
 body{
 	box-sizing: border-box;
-	padding: 3rem;
 	font-family: 'Roboto', sans-serif;
 }
 
-// Colors
-
-$white: #fff;
-$black: #000;
-$grey: #D3D3D3;

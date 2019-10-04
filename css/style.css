@@ -15,8 +15,13 @@ html {
 
 body {
   box-sizing: border-box;
-  padding: 3rem;
   font-family: 'Roboto', sans-serif; }
+
+#switch:checked ~ .container {
+  background-color: #26242E;
+  border: 3rem solid #26242E;
+  transition: all 0.3s;
+  color: #fff; }
 
 .header {
   text-align: center;
@@ -41,8 +46,7 @@ body {
   .nav--item {
     margin: 0 0.5rem;
     padding: 1rem 1rem 0 1rem;
-    border: 1px solid transparent;
-    transition: all 0.2s; }
+    border: 1px solid transparent; }
     .nav--item:hover {
       background-color: #D3D3D3;
       color: #fff;
@@ -61,3 +65,7 @@ body {
   .advertisment--img {
     width: 100%;
     height: auto; }
+
+.container {
+  border: 3rem solid #fff;
+  background-color: #fff; }

@@ -1,0 +1,8 @@
+#switch:checked ~ .container{
+	background-color: $dark;
+	border: 3rem solid $dark;
+
+	transition: all 0.3s;
+
+	color: $white;
+  }
