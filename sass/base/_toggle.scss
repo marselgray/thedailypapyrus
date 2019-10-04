@@ -1,3 +1,71 @@
+// toggle feature
+
+#switch{
+	display: none;
+}
+
+label, .toggle {
+	height: 2.8rem;
+	border-radius: 100px;
+}
+label {
+	width: 20%;
+	background-color: rgba(0,0,0,.1);
+	border-radius: 100px;
+	position: relative;
+	display: block;
+	margin: 3rem auto;
+	cursor: pointer;
+}
+.toggle {
+	position: absolute;
+	width: 50%;
+	background: $sun;
+	box-shadow: 0 2px 15px rgba(0,0,0,.15);
+	transition: transform .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.names {
+	font-weight: bolder;
+	width: 65%;
+	margin-left: 17.5%;
+	margin-top: 3.5%;
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	user-select: none;
+}
+.light{
+	color: $white;
+}
+.dark {
+	opacity: .5;
+}
+
+
+
+// dark mode
+#switch:checked ~ label{
+
+	.toggle{
+		background: $moon;
+		color: $white;
+		transform: translateX(100%);
+
+		.names{
+
+			.light{
+				opacity: 0.5;
+				color: $white;
+			}
+		
+			.dark{
+				opacity: 1;
+				color: $black;
+			}
+		}
+	}
+}
+
 #switch:checked ~ .container{
 	background-color: $dark;
 	border: 3rem solid $dark;
@@ -5,4 +73,4 @@
 	transition: all 0.3s;
 
 	color: $white;
-  }
+}

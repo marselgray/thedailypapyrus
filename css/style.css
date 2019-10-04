@@ -17,6 +17,56 @@ body {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif; }
 
+#switch {
+  display: none; }
+
+label, .toggle {
+  height: 2.8rem;
+  border-radius: 100px; }
+
+label {
+  width: 20%;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 100px;
+  position: relative;
+  display: block;
+  margin: 3rem auto;
+  cursor: pointer; }
+
+.toggle {
+  position: absolute;
+  width: 50%;
+  background: linear-gradient(40deg, #FF0080, #FF8C00 70%);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+
+.names {
+  font-weight: bolder;
+  width: 65%;
+  margin-left: 17.5%;
+  margin-top: 3.5%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  user-select: none; }
+
+.light {
+  color: #fff; }
+
+.dark {
+  opacity: .5; }
+
+#switch:checked ~ label .toggle {
+  background: linear-gradient(40deg, #8983F7, #A3DAFB 70%);
+  color: #fff;
+  transform: translateX(100%); }
+  #switch:checked ~ label .toggle .names .light {
+    opacity: 0.5;
+    color: #fff; }
+  #switch:checked ~ label .toggle .names .dark {
+    opacity: 1;
+    color: #000; }
+
 #switch:checked ~ .container {
   background-color: #26242E;
   border: 3rem solid #26242E;
