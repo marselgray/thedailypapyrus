@@ -1,0 +1,53 @@
+.video{
+	position: relative;
+	padding-bottom: 56.25%;
+	overflow: hidden;
+	max-width: 100%;
+	height: auto;
+	
+	&--iframe{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.opinion{
+
+	&--feature{
+		position: relative;
+		margin: 1rem 0;
+		text-align: center;
+
+		@include breakpoint(medium){
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+		
+		&__img{
+			display: none;
+			width: 15rem;
+			
+			@include breakpoint(medium){
+				display: block;
+			}
+		}
+
+		&__heading{
+			font-size: 1.8rem;
+		}
+
+		&__date{
+			font-size: 1.2rem;
+
+		}
+
+		&__author{
+			font-size: 1.6rem;
+		}
+	}
+}

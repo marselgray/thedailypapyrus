@@ -23,7 +23,7 @@
 	<div class="container">
 		<header class="header">
 			<h1 class="header--title">The Daily Papyrus</h1>
-			<h5 class="header--date" id='date'></h5>
+			<h5 class='header--date date'></h5>
 	
 			<nav class="nav">
 				<div href="#" class="nav--item">Home</div>
@@ -44,11 +44,49 @@
 		</section>
 	
 		<main class="main">
-			<article class="">
-				
+			<article class="article">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui nunc mattis enim ut. Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar. Nunc eget lorem dolor sed viverra ipsum nunc aliquet bibendum. Euismod quis viverra nibh cras pulvinar mattis nunc. Bibendum ut tristique et egestas. Nulla facilisi etiam dignissim diam quis enim. Velit scelerisque in dictum non consectetur a. Lacus sed viverra tellus in. Tortor aliquam nulla facilisi cras fermentum odio. Elit at imperdiet dui accumsan sit amet. In arcu cursus euismod quis viverra nibh. Odio facilisis mauris sit amet massa. Non odio euismod lacinia at. Sodales ut eu sem integer vitae justo eget magna. Nibh venenatis cras sed felis. Molestie ac feugiat sed lectus. Ac turpis egestas integer eget aliquet nibh praesent tristique. Nunc sed id semper risus in hendrerit gravida. Ultricies leo integer malesuada nunc vel risus commodo viverra maecenas.
 			</article>
-			<aside class="">
-	
+			<aside class="aside">
+				<div class="opinion">
+					<h2 class="section--heading">Opinion</h2>
+					<div class="opinion--feature">
+						<img src="img/avatars/avatar1.jpg" alt="avatar" class="opinion--feature__img">
+						<h6 class="opinion--feature__heading">
+							Can Congress Still Govern? 
+						</h6>
+						<p class="opinion--feature__date date"></p>
+						<p class="opinion--feature__author">
+							by Mark Jacobs
+						</p>
+					</div>
+
+					<div class="opinion--feature">
+						<img src="img/avatars/avatar2.jpg" alt="avatar" class="opinion--feature__img">
+						<h6 class="opinion--feature__heading">
+							Kids and the Internet 
+						</h6>
+						<p class="opinion--feature__date date"></p>
+						<p class="opinion--feature__author">
+							by Sandy Hobb
+						</p>
+					</div>
+
+					<div class="opinion--feature">
+						<img src="img/avatars/avatar3.jpg" alt="avatar" class="opinion--feature__img">
+						<h6 class="opinion--feature__heading">
+							The Future of Foreign Relations 
+						</h6>
+						<p class="opinion--feature__date date"></p>
+						<p class="opinion--feature__author">
+							by Illy Hill
+						</p>
+					</div>
+				</div>
+
+				<div class="video">
+					<iframe class='video--iframe' width="560" height="315" src="https://www.youtube.com/embed/ScMzIvxBSi4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
 			</aside>
 		</main>
 	</div>
@@ -64,7 +102,10 @@
 	const y = new Date();
 	const year = y.getFullYear();
 	
-	document.getElementById('date').innerHTML = monthPrinted + ' ' + day + ', ' + year;
+	const dates = document.getElementsByClassName('date');
+	for(let i = 0; i < dates.length; i++){
+		dates[i].innerHTML = monthPrinted + ' ' + day + ', ' + year;
+	}
 
 	function bodyToggle() {
 

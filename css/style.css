@@ -7,10 +7,6 @@
   box-sizing: inherit; }
 
 html {
-  /* this is the root font size so now 1 rem equals 10px
-	font-size: 10px;
-	changing it to percentage allow for people with poor or limited eye sight to have a better
-	experience when viewing website */
   font-size: 62.5%; }
 
 body {
@@ -25,7 +21,7 @@ label, .toggle {
   border-radius: 100px; }
 
 label {
-  width: 15%;
+  width: 200px;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 100px;
   position: relative;
@@ -44,7 +40,7 @@ label {
   font-weight: bolder;
   width: 65%;
   margin-left: 17.5%;
-  margin-top: 3.5%;
+  margin-top: 4.5%;
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -73,18 +69,66 @@ label {
   transition: all 0.3s;
   color: #fff; }
 
+.section--heading {
+  font-size: 2.5rem;
+  text-align: center; }
+
+.video {
+  position: relative;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto; }
+  .video--iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+.opinion--feature {
+  position: relative;
+  margin: 1rem 0;
+  text-align: center; }
+  @media (min-width: 56.25em) {
+    .opinion--feature {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; } }
+  .opinion--feature__img {
+    display: none;
+    width: 15rem;
+    border-radius: 50%; }
+    @media (min-width: 56.25em) {
+      .opinion--feature__img {
+        display: block; } }
+  .opinion--feature__heading {
+    font-size: 1.8rem; }
+  .opinion--feature__date {
+    font-size: 1.2rem; }
+  .opinion--feature__author {
+    font-size: 1.6rem; }
+
 .header {
   text-align: center;
   font-size: 1.6rem;
   border-bottom: 1px solid #000;
-  margin: 0 0 2rem 0; }
+  margin: 0 auto 2rem auto;
+  max-width: 1000px; }
   .header--title {
-    font-size: 5rem;
+    font-size: 3rem;
     padding: 0 0 1rem 0;
     letter-spacing: 1px; }
+    @media (min-width: 56.25em) {
+      .header--title {
+        font-size: 5rem; } }
   .header--date {
-    font-size: 2.1rem;
+    font-size: 1.8rem;
     font-weight: 100; }
+    @media (min-width: 56.25em) {
+      .header--date {
+        font-size: 2.1rem; } }
 
 .nav {
   padding: 2rem 0 0 0;
@@ -119,3 +163,23 @@ label {
 .container {
   border: 3rem solid #fff;
   background-color: #fff; }
+
+.main {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 0 auto; }
+  @media (min-width: 56.25em) {
+    .main {
+      flex-direction: row; } }
+  .main .article {
+    background-color: red; }
+    @media (min-width: 56.25em) {
+      .main .article {
+        width: 75%; } }
+  .main .aside {
+    background-color: green; }
+    @media (min-width: 56.25em) {
+      .main .aside {
+        width: 25%; } }

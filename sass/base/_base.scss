@@ -7,23 +7,44 @@
 	box-sizing: inherit;
 }
 
+// mobile first design
+@mixin breakpoint($breakpoint) {
+	@if $breakpoint == small {
+		@media (min-width: 37.5em){
+			@content;
+		}
+	}
+
+	@if $breakpoint == medium {
+		@media (min-width: 56.25em){
+			@content;
+		}
+	}
+
+	@if $breakpoint == large {
+		@media (min-width: 75em){
+			@content;
+		}
+	}
+
+	@if $breakpoint == xlarge {
+		@media (min-width: 112.5em){
+			@content;
+		}
+	}
+}
+
 // Colors
 
 $white: #fff;
 $black: #000;
 $grey: #D3D3D3;
-
 $dark: #26242E;
-
 $moon: linear-gradient(40deg, #8983F7, #A3DAFB 70%);
 $sun: linear-gradient(40deg, #FF0080,#FF8C00 70%);
 
 html{
-	/* this is the root font size so now 1 rem equals 10px
-	font-size: 10px;
-	changing it to percentage allow for people with poor or limited eye sight to have a better
-	experience when viewing website */
-	font-size: 62.5% ;
+	font-size: 62.5%;
 }
 
 
@@ -31,4 +52,3 @@ body{
 	box-sizing: border-box;
 	font-family: 'Roboto', sans-serif;
 }
-

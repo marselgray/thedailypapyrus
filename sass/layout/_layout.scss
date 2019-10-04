@@ -2,3 +2,31 @@
 	border: 3rem solid $white;
 	background-color: $white;
 }
+.main{
+
+	padding: 2rem 0;
+	display: flex;
+	flex-direction: column;
+	max-width: 1000px;
+	margin: 0 auto;
+
+	@include breakpoint(medium){
+		flex-direction: row;
+	}
+
+	.article{
+		background-color: red;
+
+		@include breakpoint(medium){
+			width: 75%;
+		}
+	}
+
+	.aside{
+		background-color: green;
+
+		@include breakpoint(medium){
+			width: 25%;
+		}
+	}
+}
