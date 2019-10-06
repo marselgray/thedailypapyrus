@@ -16,12 +16,19 @@
 
 .opinion{
 
+	padding: 1rem;
+
+	&--link{
+		text-decoration: none;
+		color: $black;
+	}
+
 	&--feature{
 		position: relative;
 		margin: 1rem 0;
-		text-align: center;
 
 		@include breakpoint(medium){
+			text-align: center;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -30,12 +37,14 @@
 		
 		&__img{
 			display: none;
-			width: 15rem;
 			
 			@include breakpoint(medium){
 				display: block;
+				height: 5rem;
+				border-radius: 50%;
 			}
 		}
+
 
 		&__heading{
 			font-size: 1.8rem;
@@ -48,6 +57,7 @@
 
 		&__author{
 			font-size: 1.6rem;
+			margin: 0.5rem 0;
 		}
 	}
 }
