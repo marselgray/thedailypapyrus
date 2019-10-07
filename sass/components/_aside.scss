@@ -1,11 +1,11 @@
-.video{
+.media-container{
 	position: relative;
 	padding-bottom: 56.25%;
 	overflow: hidden;
 	max-width: 100%;
 	height: auto;
 	
-	&--iframe{
+	iframe, img{
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -18,21 +18,37 @@
 
 	padding: 1rem;
 
+	&--container{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
 	&--link{
 		text-decoration: none;
 		color: $black;
 	}
 
+	&--feature:not(:last-child){
+		@include breakpoint(medium){
+			border-bottom: 2px solid $dark;
+    		padding: 0 0 1rem 0;
+		}
+	}
+
 	&--feature{
 		position: relative;
 		margin: 1rem 0;
+		flex: 1 1 33.33%;
 
 		@include breakpoint(medium){
-			text-align: center;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
+			text-align: center;
+			flex: 1 1 100%;
 		}
 		
 		&__img{

@@ -2,9 +2,7 @@
 
 	&--heading{
 		font-size: 2.5rem;
-
-		@include breakpoint(medium){
-			text-align: center;
-		}
+		text-align: center;
+		margin: 0 0 2rem 0;
 	}
 }
