@@ -1,0 +1,40 @@
+.stories{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+
+	&--card{
+
+		display: flex;
+		padding: 1rem;
+
+		@include breakpoint(medium){
+			width: 50%;
+		}
+
+		@include breakpoint(large){
+			width: 33.33%;
+		}
+
+		&__item{
+			border-radius: 0.25rem;
+			box-shadow: $shadow;
+			display: flex;
+			flex-direction: column;
+			overflow: hidden;
+		}
+	}
+}
+
+.card{
+	padding: 1rem;
+	display: flex;
+    flex-direction: column;
+	align-items: flex-start;
+	
+	&--text{
+		font-size: 1.4rem;
+		margin: 1rem 0;
+	}
+}

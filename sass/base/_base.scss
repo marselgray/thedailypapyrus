@@ -7,6 +7,10 @@
 	box-sizing: inherit;
 }
 
+*:focus{
+	outline: none;
+}
+
 // mobile first design
 @mixin breakpoint($breakpoint) {
 	@if $breakpoint == small {
@@ -43,6 +47,13 @@ $dark: #26242E;
 $moon: linear-gradient(40deg, #8983F7, #A3DAFB 70%);
 $sun: linear-gradient(40deg, #FF0080,#FF8C00 70%);
 
+$shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+
+.shadow--light{
+	box-shadow: 0 20px 40px -14px rgba(#8983F7, 1) !important;
+}
+
+
 html{
 	font-size: 62.5%;
 }
@@ -52,3 +63,50 @@ body{
 	box-sizing: border-box;
 	font-family: 'Roboto', sans-serif;
 }
+
+a{
+	text-decoration: none;
+	color: $black;
+}
+
+
+// responsive videos and images
+.media-container{
+	position: relative;
+	padding-bottom: 56.25%;
+	overflow: hidden;
+	max-width: 100%;
+	height: auto;
+	
+	iframe, img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+
+.btn{
+	position: relative;
+
+	&::after{
+		background: none repeat scroll 0 0 transparent;
+		bottom: 0;
+		content: "";
+		display: block;
+		height: 2px;
+		left: 50%;
+		position: absolute;
+		background: currentColor;
+		transition: width 0.3s ease 0s, left 0.3s ease 0s;
+		width: 0;
+	}
+
+	&:hover:after{
+		width: 100%; 
+		left: 0; 
+	}
+}
+

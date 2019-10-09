@@ -1,22 +1,7 @@
-.media-container{
-	position: relative;
-	padding-bottom: 56.25%;
-	overflow: hidden;
-	max-width: 100%;
-	height: auto;
-	
-	iframe, img{
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
-}
-
 .opinion{
 
 	padding: 1rem;
+	box-shadow: $shadow;
 
 	&--container{
 		display: flex;
@@ -25,22 +10,12 @@
 		flex-wrap: wrap;
 	}
 
-	&--link{
-		text-decoration: none;
-		color: $black;
-	}
-
-	&--feature:not(:last-child){
-		@include breakpoint(medium){
-			border-bottom: 2px solid $dark;
-    		padding: 0 0 1rem 0;
-		}
-	}
 
 	&--feature{
 		position: relative;
 		margin: 1rem 0;
 		flex: 1 1 33.33%;
+		padding: 1rem;
 
 		@include breakpoint(medium){
 			display: flex;
@@ -64,6 +39,11 @@
 
 		&__heading{
 			font-size: 1.8rem;
+			width: 95%;
+			
+			@include breakpoint(medium){
+				width: 100%;
+			}
 		}
 
 		&__date{

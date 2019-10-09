@@ -6,12 +6,52 @@
   padding: 0;
   box-sizing: inherit; }
 
+*:focus {
+  outline: none; }
+
+.shadow--light {
+  box-shadow: 0 20px 40px -14px #8983f7 !important; }
+
 html {
   font-size: 62.5%; }
 
 body {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+.media-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto; }
+  .media-container iframe, .media-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+.btn {
+  position: relative; }
+  .btn::after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: currentColor;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0; }
+  .btn:hover:after {
+    width: 100%;
+    left: 0; }
 
 #switch {
   display: none; }
@@ -75,38 +115,22 @@ label {
   font-size: 2.5rem;
   text-align: center;
   margin: 0 0 2rem 0; }
-
-.media-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  overflow: hidden;
-  max-width: 100%;
-  height: auto; }
-  .media-container iframe, .media-container img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; }
+  .section--heading__sub {
+    font-size: 2rem; }
 
 .opinion {
-  padding: 1rem; }
+  padding: 1rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25); }
   .opinion--container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap; }
-  .opinion--link {
-    text-decoration: none;
-    color: #000; }
-  @media (min-width: 56.25em) {
-    .opinion--feature:not(:last-child) {
-      border-bottom: 2px solid #26242E;
-      padding: 0 0 1rem 0; } }
   .opinion--feature {
     position: relative;
     margin: 1rem 0;
-    flex: 1 1 33.33%; }
+    flex: 1 1 33.33%;
+    padding: 1rem; }
     @media (min-width: 56.25em) {
       .opinion--feature {
         display: flex;
@@ -123,12 +147,28 @@ label {
           height: 5rem;
           border-radius: 50%; } }
     .opinion--feature__heading {
-      font-size: 1.8rem; }
+      font-size: 1.8rem;
+      width: 95%; }
+      @media (min-width: 56.25em) {
+        .opinion--feature__heading {
+          width: 100%; } }
     .opinion--feature__date {
       font-size: 1.2rem; }
     .opinion--feature__author {
       font-size: 1.6rem;
       margin: 0.5rem 0; }
+
+.feature {
+  font-size: 1.6rem;
+  margin: 1rem 0 2rem 0;
+  padding: 0 0 2rem 0;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25); }
+  .feature--story__author {
+    margin: 0.5rem 0; }
+  .feature--story__date {
+    margin: 0.5rem 0; }
+  .feature--story__paragraph {
+    margin: 1rem 0; }
 
 .header {
   text-align: center;
@@ -180,6 +220,36 @@ label {
     width: 100%;
     height: auto; }
 
+.stories {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0; }
+  .stories--card {
+    display: flex;
+    padding: 1rem; }
+    @media (min-width: 56.25em) {
+      .stories--card {
+        width: 50%; } }
+    @media (min-width: 75em) {
+      .stories--card {
+        width: 33.33%; } }
+    .stories--card__item {
+      border-radius: 0.25rem;
+      box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden; }
+
+.card {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+  .card--text {
+    font-size: 1.4rem;
+    margin: 1rem 0; }
+
 .container {
   border: 3rem solid #fff;
   background-color: #fff; }
@@ -193,9 +263,16 @@ label {
   @media (min-width: 56.25em) {
     .main {
       flex-direction: row; } }
-  @media (min-width: 56.25em) {
-    .main .article {
-      width: 75%; } }
-  @media (min-width: 56.25em) {
-    .main .aside {
-      width: 25%; } }
+  .main .article {
+    padding: 1rem; }
+    @media (min-width: 56.25em) {
+      .main .article {
+        width: 75%; } }
+  .main .aside {
+    padding: 1rem; }
+    @media (min-width: 56.25em) {
+      .main .aside {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around; } }
