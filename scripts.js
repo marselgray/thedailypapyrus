@@ -28,10 +28,7 @@ function bodyToggle() {
 
 	const checkBox = document.getElementById('switch');
 	const body = document.getElementsByTagName('body')[0];
-	const cards = document.getElementsByClassName('stories--card__item');
-	const feature = document.getElementsByClassName('feature')[0];
-	const opinion = document.getElementsByClassName('opinion')[0];
-
+	
 	if (checkBox.checked == true){
 		body.style.background = "#26242E";
 	} else {
