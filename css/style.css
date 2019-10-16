@@ -110,6 +110,8 @@ label {
   color: #fff; }
   #switch:checked ~ .container a {
     color: #fff; }
+  #switch:checked ~ .container .nav--item:hover {
+    background: linear-gradient(40deg, #8983F7, #A3DAFB 70%); }
 
 .section--heading {
   font-size: 2.5rem;
@@ -200,13 +202,10 @@ label {
   .nav--item {
     margin: 0 0.5rem;
     padding: 1rem 1rem 0 1rem;
-    border: 1px solid transparent; }
+    border-radius: 3px; }
     .nav--item:hover {
-      background-color: #D3D3D3;
-      color: #fff;
-      border-top: 1px solid #000;
-      border-right: 1px solid #000;
-      border-left: 1px solid #000; }
+      background: linear-gradient(40deg, #FF0080, #FF8C00 70%);
+      color: #fff; }
     .nav--item__link {
       color: #000;
       text-decoration: none; }
@@ -272,7 +271,8 @@ label {
     padding: 1rem; }
     @media (min-width: 56.25em) {
       .main .aside {
+        padding: 1rem 1rem 2rem 1rem;
         width: 25%;
         display: flex;
         flex-direction: column;
-        justify-content: space-around; } }
+        justify-content: space-between; } }

@@ -77,4 +77,10 @@ label {
 	a{
 		color: $white;
 	}
+
+	.nav--item{
+		&:hover{
+			background: $moon;
+		}
+	}
 }
