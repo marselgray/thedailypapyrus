@@ -9,9 +9,6 @@
 *:focus {
   outline: none; }
 
-.shadow--light {
-  box-shadow: 0 20px 40px -14px #8983f7 !important; }
-
 html {
   font-size: 62.5%; }
 
@@ -110,6 +107,8 @@ label {
   color: #fff; }
   #switch:checked ~ .container a {
     color: #fff; }
+  #switch:checked ~ .container .header::before {
+    background: linear-gradient(40deg, #8983F7, #A3DAFB 70%); }
   #switch:checked ~ .container .nav--item:hover {
     background: linear-gradient(40deg, #8983F7, #A3DAFB 70%); }
 
@@ -175,9 +174,17 @@ label {
 .header {
   text-align: center;
   font-size: 1.6rem;
-  border-bottom: 1px solid #26242E;
   margin: 0 auto 2rem auto;
-  max-width: 1000px; }
+  max-width: 1000px;
+  position: relative; }
+  .header::before {
+    content: '';
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(40deg, #FF0080, #FF8C00 70%);
+    position: absolute;
+    left: 0;
+    top: 105%; }
   .header--title {
     font-size: 3rem;
     padding: 0 0 1rem 0;
@@ -201,7 +208,7 @@ label {
   cursor: pointer; }
   .nav--item {
     margin: 0 0.5rem;
-    padding: 1rem 1rem 0 1rem;
+    padding: 1rem;
     border-radius: 3px; }
     .nav--item:hover {
       background: linear-gradient(40deg, #FF0080, #FF8C00 70%);

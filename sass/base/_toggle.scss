@@ -78,6 +78,14 @@ label {
 		color: $white;
 	}
 
+	.header{
+
+		&::before{
+
+			background: $moon;
+		}
+	}
+
 	.nav--item{
 		&:hover{
 			background: $moon;

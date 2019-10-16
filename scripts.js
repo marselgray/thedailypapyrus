@@ -34,19 +34,7 @@ function bodyToggle() {
 
 	if (checkBox.checked == true){
 		body.style.background = "#26242E";
-		feature.classList.add('shadow--light');
-		opinion.classList.add('shadow--light');
-
-		for(let i = 0; i < cards.length; i++){
-			cards[i].classList.add('shadow--light');
-		}
-
 	} else {
 		body.style.background = "#fff";
-		feature.classList.remove('shadow--light');
-		opinion.classList.remove('shadow--light');
-		for(let i = 0; i < cards.length; i++){
-			cards[i].classList.remove('shadow--light');
-		}
 	}
 }

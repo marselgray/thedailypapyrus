@@ -1,9 +1,19 @@
 .header{
 	text-align: center;
 	font-size: 1.6rem;
-	border-bottom: 1px solid $dark;
 	margin: 0 auto 2rem auto;
 	max-width: 1000px;
+	position: relative;
+
+	&::before{
+		content: '';
+		height: 3px;
+		width: 100%;
+		background: $sun;
+		position: absolute;
+		left: 0;
+		top: 105%;
+	}
 
 	&--title{
 		font-size: 3rem;
@@ -36,7 +46,7 @@
 
 	&--item{
 		margin: 0 0.5rem;
-		padding: 1rem 1rem 0 1rem;
+		padding: 1rem;
 		border-radius: 3px;
 
 		&:hover{
