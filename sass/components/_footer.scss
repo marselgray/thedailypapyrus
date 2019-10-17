@@ -105,9 +105,15 @@
 	.btn{
 
 		&::after{
-			width: 20%;
+			width: 0;
 			left: 50%;
 			transform: translate(-50%);
+		}
+
+		&:hover{
+			&::after{
+				width: 20%;
+			}
 		}
 	}
 }
