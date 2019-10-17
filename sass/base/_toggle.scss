@@ -91,4 +91,14 @@ label {
 			background: $moon;
 		}
 	}
+
+	.footer{
+		.footer--social__wrap{
+			border: 1px solid $dark;
+
+			i.inactive{
+				color: $dark;
+			}
+		}
+	}
 }
