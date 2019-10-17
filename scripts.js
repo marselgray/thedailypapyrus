@@ -13,6 +13,9 @@ for(let i = 0; i < dates.length; i++){
 	dates[i].innerHTML = monthPrinted + ' ' + day + ', ' + year;
 }
 
+const yearText = document.getElementById('year');
+yearText.innerHTML = year;
+
 const race = document.getElementsByClassName('race');
 let newYear;
 if (year % 2 === 0){

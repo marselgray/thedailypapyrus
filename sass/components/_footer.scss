@@ -87,3 +87,27 @@
 	}
 }
 
+.copyright{
+
+	padding: 5rem 0;
+	font-size: 2rem;
+
+	&--text{
+		display: flex;
+		justify-content: center;
+		color: $dark;
+
+		p{
+			margin: 0 1rem;
+		}
+	}
+
+	.btn{
+
+		&::after{
+			width: 20%;
+			left: 50%;
+			transform: translate(-50%);
+		}
+	}
+}

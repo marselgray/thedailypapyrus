@@ -101,6 +101,7 @@ a{
 		background: currentColor;
 		transition: width 0.3s ease 0s, left 0.3s ease 0s;
 		width: 0;
+		top: 115%;
 	}
 
 	&:hover:after{

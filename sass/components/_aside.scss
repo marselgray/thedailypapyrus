@@ -28,11 +28,12 @@
 		
 		&__img{
 			display: none;
+			height: 5rem;
+			border-radius: 50%;
+			filter: grayscale(100%);
 			
 			@include breakpoint(medium){
 				display: block;
-				height: 5rem;
-				border-radius: 50%;
 			}
 		}
 
