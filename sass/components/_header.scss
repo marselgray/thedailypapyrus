@@ -2,8 +2,15 @@
 	text-align: center;
 	font-size: 1.6rem;
 	margin: 0 auto 2rem auto;
-	max-width: 80vw;
 	position: relative;
+
+	@include breakpoint(medium){
+		max-width: 95vw;
+	}
+
+	@include breakpoint(xlarge){
+		max-width: 150rem;
+	}
 
 	&::before{
 		content: '';
@@ -68,12 +75,14 @@
 
 .advertisment{
 	position: relative;
-	max-width: 80vw;
     display: block;
-    margin: 0 auto;
+	margin: 0 auto;
+	
+	@include breakpoint(medium){
+		max-width: 95vw;
+	}
 
-	&--img{
-		width: 100%;
-		height: auto;
+	@include breakpoint(xlarge){
+		max-width: 150rem;
 	}
 }

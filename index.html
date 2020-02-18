@@ -40,7 +40,15 @@
 		</header>
 
 		<section class="advertisment">
-			<img src="img/advertisment.jpg" alt="advertisment" class='advertisment--img'>
+			<a href="img/main/advertisment-large.jpg" 
+				data-srcset="img/main/advertisment-small.jpg 400w, 
+				img/main/advertisment-medium.jpg 800w, 
+				img/main/advertisment-large.jpg 1200w"
+				class="primary progressive replace">
+		
+				<img src="img/main/advertisment-large.jpg" 
+				class="preview" alt="advertisment" />
+			</a>
 		</section>
 	
 		<main class="main">
@@ -49,9 +57,18 @@
 					<div class="feature--story">
 						<h2 class="section--heading">SCOTUS Rules 9-0 in Landmark Case</h2>
 						<div class="feature--container">
-							<div class="media-container">
+							<a href="img/main/feature-large.jpg" 
+								data-srcset="img/main/feature-small.jpg 400w, 
+								img/main/feature-medium.jpg 800w, 
+								img/main/feature-large.jpg 1200w"
+								class="primary progressive replace">
+						
+								<img src="img/main/feature-large.jpg" 
+								class="preview" alt="advertisment" />
+							</a>
+							<!-- <div class="media-container">
 								<img src="img/feature.jpg" alt="featured image" class="feature--story__img">
-							</div>
+							</div> -->
 							<p class="feature--story__author">by Mark Jacobs</p>
 							<p class="feature--story__date date"></p>
 							<p class="feature--story__paragraph">
