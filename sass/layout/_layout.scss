@@ -1,8 +1,15 @@
 .container{
 	border: 3rem solid $white;
 	background-color: $white;
-	max-width: 80vw;
 	margin: 0 auto;
+
+	@include breakpoint(medium){
+		max-width: 95vw;
+	}
+
+	@include breakpoint(xlarge){
+		max-width: 150rem;
+	}
 }
 .main{
 
@@ -39,3 +46,37 @@
 .photo{
 	margin: 0 auto;
 }
+
+
+.progressive {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	outline: none;
+}
+
+.progressive img {
+	display: block;
+	width: 100%;
+	max-width: none;
+	height: auto;
+	border: 0 none;
+}
+
+.progressive img.preview {
+	filter: blur(2vw);
+	transform: scale(1.05);
+}
+
+.progressive img.reveal {
+	position: absolute;
+	left: 0;
+	top: 0;
+	will-change: transform, opacity;
+	animation: progressiveReveal 1s ease-out;
+}
+  
+  @keyframes progressiveReveal {
+	  0% { transform: scale(1.05); opacity: 0; }
+	  100% { transform: scale(1); opacity: 1; }
+  }
