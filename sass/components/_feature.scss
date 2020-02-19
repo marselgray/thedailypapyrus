@@ -17,10 +17,6 @@
 			padding: 0 1rem;
 		}
 
-		&__img{
-
-		}
-
 		&__paragraph{
 			margin: 1rem 0;
 			padding: 0 1rem;
@@ -28,6 +24,11 @@
 
 		.btn{
 			padding: 0 1rem;
+
+			&:hover:after{
+				width: 80%; 
+				left: 10%; 
+			}
 		}
 	}
 }
