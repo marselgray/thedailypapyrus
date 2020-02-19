@@ -480,7 +480,11 @@ label {
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; }
+  justify-content: space-between;
+  min-height: 15rem; }
+  @media (min-width: 75em) {
+    .card {
+      min-height: 24rem; } }
   .card--text {
     font-size: 1.6rem;
     margin: 1rem 0; }
@@ -521,6 +525,8 @@ label {
         display: flex;
         flex-direction: column;
         justify-content: space-between; } }
+    .main .aside .media-container {
+      margin: 1rem 0; }
 
 .photo {
   margin: 0 auto; }

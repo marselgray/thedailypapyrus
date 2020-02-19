@@ -31,7 +31,12 @@
 	padding: 1rem;
 	display: flex;
     flex-direction: column;
-	align-items: flex-start;
+	justify-content: space-between;
+	min-height: 15rem;
+
+	@include breakpoint(large){
+		min-height: 24rem;
+	}
 	
 	&--text{
 		font-size: 1.6rem;
