@@ -43,14 +43,14 @@ a {
     content: "";
     display: block;
     height: 2px;
-    left: 50%;
+    left: 0;
     position: absolute;
     background: currentColor;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
     top: 115%; }
   .btn:hover:after {
-    width: 100%;
+    width: 7.2rem;
     left: 0; }
 
 #switch {
@@ -252,12 +252,12 @@ label {
           transform: translate(-150px, -50%); }
 
 .copyright {
-  padding: 5rem 0;
-  font-size: 2rem; }
+  padding: 5rem 0; }
   .copyright--text {
     display: flex;
     justify-content: center;
-    color: #26242E; }
+    color: #26242E;
+    font-size: 2rem; }
     .copyright--text p {
       margin: 0 1rem; }
   .copyright .btn::after {

@@ -97,7 +97,7 @@ a{
 		content: "";
 		display: block;
 		height: 2px;
-		left: 50%;
+		left: 0;
 		position: absolute;
 		background: currentColor;
 		transition: width 0.3s ease 0s, left 0.3s ease 0s;
@@ -106,7 +106,7 @@ a{
 	}
 
 	&:hover:after{
-		width: 100%; 
+		width: 7.2rem; 
 		left: 0; 
 	}
 }
