@@ -35,7 +35,8 @@ a {
     height: 100%; }
 
 .btn {
-  position: relative; }
+  position: relative;
+  font-size: 1.5rem; }
   .btn::after {
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
@@ -481,8 +482,11 @@ label {
   flex-direction: column;
   align-items: flex-start; }
   .card--text {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin: 1rem 0; }
+
+.stories img {
+  min-height: 19rem; }
 
 .container {
   border: 3rem solid #fff;
