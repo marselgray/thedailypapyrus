@@ -40,6 +40,10 @@
 			flex-direction: column;
 			justify-content: space-between;
 		}
+
+		.media-container{
+			margin: 1rem 0;
+		}
 	}
 }
 
@@ -75,8 +79,8 @@
 	will-change: transform, opacity;
 	animation: progressiveReveal 1s ease-out;
 }
-  
-  @keyframes progressiveReveal {
-	  0% { transform: scale(1.05); opacity: 0; }
-	  100% { transform: scale(1); opacity: 1; }
-  }
+
+@keyframes progressiveReveal {
+	0% { transform: scale(1.05); opacity: 0; }
+	100% { transform: scale(1); opacity: 1; }
+}
