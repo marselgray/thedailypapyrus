@@ -26,7 +26,8 @@ a {
   padding-bottom: 56.25%;
   overflow: hidden;
   max-width: 100%;
-  height: auto; }
+  height: auto;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25); }
   .media-container iframe, .media-container img {
     position: absolute;
     top: 0;
@@ -320,6 +321,9 @@ label {
     .nav--item__link {
       color: #000;
       text-decoration: none; }
+    @media (min-width: 75em) {
+      .nav--item {
+        padding: 1rem 2rem; } }
 
 .advertisment {
   position: relative;
@@ -512,7 +516,7 @@ label {
     .main {
       flex-direction: row; } }
   .main .article {
-    padding: 1rem; }
+    padding: 1rem 0; }
     @media (min-width: 56.25em) {
       .main .article {
         width: 75%; } }
