@@ -12,16 +12,6 @@
 		max-width: 150rem;
 	}
 
-	&::before{
-		content: '';
-		height: 3px;
-		width: 100%;
-		background: $sun;
-		position: absolute;
-		left: 0;
-		top: 105%;
-	}
-
 	&--title{
 		font-size: 3rem;
 		padding: 0 0 1rem 0;
@@ -88,5 +78,22 @@
 
 	@include breakpoint(xlarge){
 		max-width: 150rem;
+	}
+}
+
+
+.breaking{
+
+	margin: 0 0 1rem 0;
+
+	&--news{
+		background: $sun;
+		padding: 0.5rem 0;
+
+		&__text{
+			font-size: 3rem;
+			color: $white;
+			animation: marquee 20s linear infinite;
+		}
 	}
 }

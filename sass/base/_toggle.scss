@@ -78,11 +78,13 @@ label {
 		color: $white;
 	}
 
-	.header{
-
-		&::before{
-
+	.breaking{
+		.breaking--news{
 			background: $moon;
+		}
+
+		.breaking--news__text{
+			color: $dark;
 		}
 	}
 
